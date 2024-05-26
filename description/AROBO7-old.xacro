@@ -1,0 +1,391 @@
+<?xml version="1.0" ?>
+<robot name="AROBO7" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<!-- Old ROS1 sub args from python script, dont use
+<xacro:include filename="$(find AROBO7)/description/materials.xacro" />
+<xacro:include filename="$(find AROBO7)/description/AROBO7.trans" />
+<xacro:include filename="$(find AROBO7)/description/AROBO7.gazebo" />
+-->
+
+<xacro:arg name="materials_file" default="materials.xacro"/>
+<xacro:arg name="trans_file" default="AROBO7.trans"/>
+<xacro:arg name="gazebo_file" default="AROBO7.gazebo"/>
+<xacro:include filename="$(arg materials_file)" />
+<xacro:include filename="$(arg trans_file)" />
+<xacro:include filename="$(arg gazebo_file)" />
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.11519119793969822 0.11413126795758022 0.16643280236815491" rpy="0 0 0"/>
+    <mass value="3.292255080550243"/>
+    <inertia ixx="0.011321" iyy="0.016138" izz="0.021277" ixy="-4e-06" iyz="-0.003328" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="drive_side_plate_v42_Mirror__1_1">
+  <inertial>
+    <origin xyz="0.012022496499106028 -0.14949703714674073 0.04579551307879068" rpy="0 0 0"/>
+    <mass value="5.326807201886019"/>
+    <inertia ixx="0.052355" iyy="0.00619" izz="0.047069" ixy="-6.5e-05" iyz="-0.000154" ixz="-0.000596"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.225208 -0.153125 -0.155461" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/drive_side_plate_v42_Mirror__1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.225208 -0.153125 -0.155461" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/drive_side_plate_v42_Mirror__1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="drive_side_plate_v42_1_1">
+  <inertial>
+    <origin xyz="-0.012023163556986415 -0.16033403716597758 -0.020367486991740624" rpy="0 0 0"/>
+    <mass value="5.326807202482287"/>
+    <inertia ixx="0.052355" iyy="0.00619" izz="0.047069" ixy="6.5e-05" iyz="-0.000154" ixz="0.000596"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.005208 -0.163962 -0.221624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/drive_side_plate_v42_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.005208 -0.163962 -0.221624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/drive_side_plate_v42_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lower_chassis_front_v6_1_1">
+  <inertial>
+    <origin xyz="-0.06752001965122506 -0.10569146171436111 0.026875413717897367" rpy="0 0 0"/>
+    <mass value="3.0761661136775946"/>
+    <inertia ixx="0.010661" iyy="0.014341" izz="0.021128" ixy="1e-06" iyz="0.003357" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.182708 -0.015147 -0.144624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/lower_chassis_front_v6_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.182708 -0.015147 -0.144624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/lower_chassis_front_v6_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="sprocket_new_v28_3_1">
+  <inertial>
+    <origin xyz="0.010830331361122852 1.4059570751651096e-06 4.310940390050977e-06" rpy="0 0 0"/>
+    <mass value="0.5034567941836791"/>
+    <inertia ixx="0.000505" iyy="0.000257" izz="0.000257" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.243708 0.115168 -0.181624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/sprocket_new_v28_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.243708 0.115168 -0.181624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/sprocket_new_v28_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="sprocket_new_v28_1_1">
+  <inertial>
+    <origin xyz="-0.01083099889556508 1.405957076705544e-06 -3.5902502893703225e-06" rpy="0 0 0"/>
+    <mass value="0.5034567941836793"/>
+    <inertia ixx="0.000505" iyy="0.000257" izz="0.000257" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.013292 0.115168 -0.181624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/sprocket_new_v28_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.013292 0.115168 -0.181624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/sprocket_new_v28_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="sprocket_new_v28_2_1">
+  <inertial>
+    <origin xyz="-0.010830998895565583 1.4055355483100218e-06 -3.5902502895091004e-06" rpy="0 0 0"/>
+    <mass value="0.5034567941836797"/>
+    <inertia ixx="0.000505" iyy="0.000257" izz="0.000257" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.013292 -0.126962 -0.181624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/sprocket_new_v28_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.013292 -0.126962 -0.181624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/sprocket_new_v28_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="sprocket_new_v28_4_1">
+  <inertial>
+    <origin xyz="0.010330331361121575 1.4055355458397756e-06 4.310940389523621e-06" rpy="0 0 0"/>
+    <mass value="0.5034567941836794"/>
+    <inertia ixx="0.000505" iyy="0.000257" izz="0.000257" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.243708 -0.126962 -0.181624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/sprocket_new_v28_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.243708 -0.126962 -0.181624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/sprocket_new_v28_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="upper_chassis_back_v10_1_1">
+  <inertial>
+    <origin xyz="-0.019101794683808626 -0.046818589360755294 0.053343267059493105" rpy="0 0 0"/>
+    <mass value="3.8016595904884554"/>
+    <inertia ixx="0.008862" iyy="0.026179" izz="0.030199" ixy="0.00016" iyz="0.001827" ixz="-0.000247"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.135208 -0.149962 -0.229854" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/upper_chassis_back_v10_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.135208 -0.149962 -0.229854" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/upper_chassis_back_v10_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="upper_chassis_front_v12_1_1">
+  <inertial>
+    <origin xyz="-0.00011192949238088279 -0.0686938599706779 -0.040160226025426016" rpy="0 0 0"/>
+    <mass value="2.3686282351310157"/>
+    <inertia ixx="0.00684" iyy="0.018257" izz="0.022292" ixy="4.7e-05" iyz="-0.002351" ixz="2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.115308 -0.01893 -0.313575" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/upper_chassis_front_v12_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.115308 -0.01893 -0.313575" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/upper_chassis_front_v12_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="IPITSBIT_Touchscreen_7in_v4">
+  <inertial>
+    <origin xyz="-0.07755760929595369 -0.04464036257987158 -0.01266235435030727" rpy="0 0 0"/>
+    <mass value="1.0746135799107006"/>
+    <inertia ixx="0.000975" iyy="0.00261" izz="0.003217" ixy="3e-06" iyz="-0.000373" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.192808 0.048784 -0.274521" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/IPITSBIT_Touchscreen_7in_v4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.192808 0.048784 -0.274521" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/IPITSBIT_Touchscreen_7in_v4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RpLidar_Case_Top_High_v6_1_1">
+  <inertial>
+    <origin xyz="-0.06417213620580224 -4.5004477194909853e-07 0.0025801831229935734" rpy="0 0 0"/>
+    <mass value="0.08458289648004855"/>
+    <inertia ixx="5.7e-05" iyy="0.000128" izz="0.000185" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.158818 -0.070509 -0.323676" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/RpLidar_Case_Top_High_v6_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.158818 -0.070509 -0.323676" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/RpLidar_Case_Top_High_v6_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RpLidar_Case_Bot_v8_1_1">
+  <inertial>
+    <origin xyz="-0.05411684504857914 0.034342772586537194 -0.013957478175042615" rpy="0 0 0"/>
+    <mass value="0.44717508674558093"/>
+    <inertia ixx="0.000464" iyy="0.000828" izz="0.001112" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.158057 -0.036166 -0.309675" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/RpLidar_Case_Bot_v8_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.158057 -0.036166 -0.309675" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/RpLidar_Case_Bot_v8_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rplidar_sensor_v1_1_1">
+  <inertial>
+    <origin xyz="-3.808269939675757e-07 -3.483338856247187e-07 0.009999637131322292" rpy="0 0 0"/>
+    <mass value="0.6752319338140147"/>
+    <inertia ixx="0.000254" iyy="0.000254" izz="0.000462" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.115318 -0.070509 -0.327676" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/rplidar_sensor_v1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.115318 -0.070509 -0.327676" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://AROBO7/description/meshes/rplidar_sensor_v1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid 1" type="fixed">
+  <origin xyz="0.225208 0.153125 0.155461" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="drive_side_plate_v42_Mirror__1_1"/>
+</joint>
+
+<joint name="Rigid 2" type="fixed">
+  <origin xyz="0.005208 0.163962 0.221624" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="drive_side_plate_v42_1_1"/>
+</joint>
+
+<joint name="Rigid 3" type="fixed">
+  <origin xyz="0.182708 0.015147 0.144624" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lower_chassis_front_v6_1_1"/>
+</joint>
+
+<joint name="Rigid 4" type="fixed">
+  <origin xyz="0.0185 -0.268293 0.026163" rpy="0 0 0"/>
+  <parent link="drive_side_plate_v42_Mirror__1_1"/>
+  <child link="sprocket_new_v28_3_1"/>
+</joint>
+
+<joint name="Rigid 5" type="fixed">
+  <origin xyz="-0.0185 -0.27913 -0.04" rpy="0 0 0"/>
+  <parent link="drive_side_plate_v42_1_1"/>
+  <child link="sprocket_new_v28_1_1"/>
+</joint>
+
+<joint name="Revolute 6" type="continuous">
+  <origin xyz="-0.0185 -0.037 -0.04" rpy="0 0 0"/>
+  <parent link="drive_side_plate_v42_1_1"/>
+  <child link="sprocket_new_v28_2_1"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="Revolute 7" type="continuous">
+  <origin xyz="0.0185 -0.026163 0.026163" rpy="0 0 0"/>
+  <parent link="drive_side_plate_v42_Mirror__1_1"/>
+  <child link="sprocket_new_v28_4_1"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="Rigid 8" type="fixed">
+  <origin xyz="0.135208 0.149962 0.229854" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="upper_chassis_back_v10_1_1"/>
+</joint>
+
+<joint name="Rigid 9" type="fixed">
+  <origin xyz="-0.0199 -0.131032 0.083721" rpy="0 0 0"/>
+  <parent link="upper_chassis_back_v10_1_1"/>
+  <child link="upper_chassis_front_v12_1_1"/>
+</joint>
+
+<joint name="Rigid 10" type="fixed">
+  <origin xyz="0.0775 -0.067714 -0.039054" rpy="0 0 0"/>
+  <parent link="upper_chassis_front_v12_1_1"/>
+  <child link="IPITSBIT_Touchscreen_7in_v4"/>
+</joint>
+
+<joint name="Rigid 11" type="fixed">
+  <origin xyz="0.000761 0.034343 0.014001" rpy="0 0 0"/>
+  <parent link="RpLidar_Case_Bot_v8_1_1"/>
+  <child link="RpLidar_Case_Top_High_v6_1_1"/>
+</joint>
+
+<joint name="Rigid 12" type="fixed">
+  <origin xyz="0.022849 -0.113796 0.079821" rpy="0 0 0"/>
+  <parent link="upper_chassis_back_v10_1_1"/>
+  <child link="RpLidar_Case_Bot_v8_1_1"/>
+</joint>
+
+<joint name="Rigid 13" type="fixed">
+  <origin xyz="-0.0435 0.0 0.004" rpy="0 0 0"/>
+  <parent link="RpLidar_Case_Top_High_v6_1_1"/>
+  <child link="rplidar_sensor_v1_1_1"/>
+</joint>
+
+</robot>

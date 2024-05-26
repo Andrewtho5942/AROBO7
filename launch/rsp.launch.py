@@ -20,6 +20,25 @@ def generate_launch_description():
     xacro_file = os.path.join(pkg_path,'description','robot.urdf.xacro')
     robot_description_config = xacro.process_file(xacro_file)
     
+#-- new xacro things --
+# Define the paths to the included files
+    
+    materials_file = os.path.join(pkg_path, 'description', 'materials.xacro')
+    trans_file = os.path.join(pkg_path, 'description', 'AROBO7.trans')
+    gazebo_file = os.path.join(pkg_path, 'description', 'AROBO7.gazebo')
+    
+ # Process the xacro file with arguments
+    robot_description_config = xacro.process_file(
+        xacro_file,
+        mappings={
+            'materials_file': materials_file,
+            'trans_file': trans_file,
+            'gazebo_file': gazebo_file
+        }
+    )
+
+#-- end xacro things --
+
     # Create a robot_state_publisher node
     params = {'robot_description': robot_description_config.toxml(), 'use_sim_time': use_sim_time}
     node_robot_state_publisher = Node(
@@ -28,7 +47,7 @@ def generate_launch_description():
         output='screen',
         parameters=[params]
     )
-
+    
 
     # Launch!
     return LaunchDescription([
