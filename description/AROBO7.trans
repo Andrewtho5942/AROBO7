@@ -1,23 +1,23 @@
 <?xml version="1.0" ?>
 <robot name="AROBO7" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
-<transmission name="Revolute_3_tran">
+<transmission name="right_drive_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute_3">
+  <joint name="right_drive">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute_3_actr">
+  <actuator name="right_drive_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Revolute_5_tran">
+<transmission name="left_drive_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute_5">
+  <joint name="left_drive">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute_5_actr">
+  <actuator name="left_drive_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>

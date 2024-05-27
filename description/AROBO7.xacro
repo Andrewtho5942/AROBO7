@@ -363,7 +363,7 @@
   <child link="sprocket_new_v28_1_1"/>
 </joint>
 
-<joint name="Revolute_3" type="continuous">
+<joint name="right_drive" type="continuous">
   <origin xyz="-0.0185 0.029999 0.037" rpy="0 0 0"/>
   <parent link="drive_side_plate_v42_1_1"/>
   <child link="sprocket_new_v28_2_1"/>
@@ -376,7 +376,7 @@
   <child link="drive_side_plate_v42_Mirror__1_1"/>
 </joint>
 
-<joint name="Revolute_5" type="continuous">
+<joint name="left_drive" type="continuous">
   <origin xyz="0.0185 -0.026164 0.026162" rpy="0 0 0"/>
   <parent link="drive_side_plate_v42_Mirror__1_1"/>
   <child link="sprocket_new_v28_4_1"/>
