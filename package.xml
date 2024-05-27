@@ -20,5 +20,6 @@
 
   <export>
     <build_type>ament_cmake</build_type>
+    <gazebo_ros gazebo_model_path = "/home/andrewtho5942/dev_ws/install/AROBO7/share/"/> 
   </export>
 </package>
