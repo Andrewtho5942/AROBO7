@@ -246,26 +246,7 @@
   </collision>
 </link>
 
-<link name="rplidar_sensor_v1_1_1">
-  <inertial>
-    <origin xyz="-3.677012131997337e-07 -3.7389566448498e-07 0.00999977147532144" rpy="0 0 0"/>
-    <mass value="0.675231933814029"/>
-    <inertia ixx="0.000254" iyy="0.000254" izz="0.000462" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.130894 -0.156967 -0.436527" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://AROBO7/description/meshes/rplidar_sensor_v1_1_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="black"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.130894 -0.156967 -0.436527" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://AROBO7/description/meshes/rplidar_sensor_v1_1_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
+
 
 <link name="RpLidar_Case_Bot_v8_1_1">
   <inertial>
@@ -413,11 +394,7 @@
   <child link="RpLidar_Case_Top_High_v6_1_1"/>
 </joint>
 
-<joint name="Rigid 11" type="fixed">
-  <origin xyz="-0.0435 0.0 0.004" rpy="0 0 0"/>
-  <parent link="RpLidar_Case_Top_High_v6_1_1"/>
-  <child link="rplidar_sensor_v1_1_1"/>
-</joint>
+
 
 <joint name="Rigid 12" type="fixed">
   <origin xyz="0.062649 -0.04511 0.079821" rpy="0 0 0"/>

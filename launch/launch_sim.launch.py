@@ -8,6 +8,11 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 from launch_ros.actions import Node
 
+#TO RUN THIS SCRIPT: ros2 launch AROBO7 launch_sim.launch.py
+
+
+#Run keyboard control command:
+#ros2 run teleop_twist_keyboard teleop_twist_keyboard
 def generate_launch_description():
 
     package_name = 'AROBO7'
@@ -23,7 +28,15 @@ def generate_launch_description():
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')]),
-    )
+    )   
+
+    #run teleop twist for controls
+    #teleop = Node(
+    #    package='teleop_twist_keyboard',
+    #    executable='teleop_twist_keyboard',
+    #    name='teleop_twist_keyboard',
+    #    output='screen'
+    #)
 
     #Run the spawner node from the gazebo_ros package
     spawn_entity = Node(
@@ -37,5 +50,5 @@ def generate_launch_description():
     
     #Launch them all!
     return LaunchDescription([
-        rsp, gazebo, spawn_entity,
+        rsp, gazebo, spawn_entity,# teleop
     ])

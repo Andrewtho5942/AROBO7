@@ -8,6 +8,8 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 from launch_ros.actions import Node
 
+#TO RUN THIS SCRIPT: ros2 launch AROBO7 launch_rviz.launch.py
+
 def generate_launch_description():
 
     package_name = 'AROBO7'
