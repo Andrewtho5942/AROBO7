@@ -18,6 +18,7 @@ def generate_launch_description():
     package_name = 'AROBO7'
 
     #Include the robot state publisher (rsp)
+    #ros2 launch AROBO7 rsp.launch.py use_sim_time:=true
     rsp = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory(package_name), 'launch', 'rsp.launch.py'
@@ -25,10 +26,13 @@ def generate_launch_description():
     )
 
     #include the gazebo launch file
+    #ros2 launch gazebo_ros gazebo.launch.py extra_gazebo_args:="--verbose"
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')]),
     )   
+
+  
 
     #run teleop twist for controls
     #teleop = Node(
@@ -50,5 +54,5 @@ def generate_launch_description():
     
     #Launch them all!
     return LaunchDescription([
-        rsp, gazebo, spawn_entity,# teleop
+        rsp, gazebo, spawn_entity # teleop
     ])
