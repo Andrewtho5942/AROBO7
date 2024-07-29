@@ -2,6 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
 <xacro:arg name="materials_file" default="materials.xacro"/>
 
+
     <joint name="lidar_joint" type="fixed">
         <origin xyz="-0.0435 0.0 0.004" rpy="0 0 0"/>
         <parent link="RpLidar_Case_Top_High_v6_1_1"/>

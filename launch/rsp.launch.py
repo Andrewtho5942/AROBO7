@@ -9,6 +9,20 @@ from launch_ros.actions import Node
 
 import xacro
 
+# Lidar launch command 
+"""
+ros2 run rplidar_ros rplidar_composition --ros-args --remap serial_port:=/dev/ttyUSB0 --param frame_id:=rplidar_sensor_v1_1_1 --param angle_compensate:=true --param scan_mode:=Standard --param serial_baudrate:=115200
+
+Debug:
+ros2 run rplidar_ros rplidar_composition --ros-args --log-level DEBUG --remap serial_port:=/dev/ttyUSB0 --param frame_id:=rplidar_sensor_v1_1_1 --param angle_compensate:=true --param scan_mode:=Standard --param serial_baudrate:=115200
+
+"""
+
+#Camera launch command
+"""
+ros2 run v4l2_camera v4l2_camera_node --ros-args -p image_size:="[640,480]" -p camera_frame_id:=camera_link_optical
+
+"""
 
 def generate_launch_description():
 
