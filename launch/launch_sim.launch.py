@@ -8,8 +8,8 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 from launch_ros.actions import Node
 
-#TO RUN THIS SCRIPT: ros2 launch AROBO7 launch_sim.launch.py
-
+# TO RUN THIS SCRIPT: ros2 launch AROBO7 launch_sim.launch.py
+# with maze.world: ros2 launch AROBO7 launch_sim.launch.py world:=./src/AROBO7/worlds/maze.world
 
 #Run keyboard control command:
 #ros2 run teleop_twist_keyboard teleop_twist_keyboard

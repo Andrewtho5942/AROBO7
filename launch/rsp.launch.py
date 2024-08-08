@@ -24,6 +24,15 @@ ros2 run v4l2_camera v4l2_camera_node --ros-args -p image_size:="[640,480]" -p c
 
 """
 
+# motor demo commands
+"""
+dev machine:
+ros2 run serial_motor_demo gui
+
+rpi:
+ros2 run serial_motor_demo driver --ros-args -p serial_por:=/dev/ttyUSB0 -p baud_rate:=57600 -p loop_rate:=30 -p encoder_cpr:=2800
+"""
+
 def generate_launch_description():
 
     # Check if we're told to use sim time
