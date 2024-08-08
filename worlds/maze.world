@@ -870,7 +870,7 @@
       <plugin name='control' filename='libgazebo_ros_control.so'/>
       <static>0</static>
       <plugin name='gazebo_ros2_control' filename='libgazebo_ros2_control.so'>
-        <parameters>/home/andrewtho5942/dev_ws/install/AROBO7/share/AROBO7/cofing/my_controllers.yaml</parameters>
+        <parameters>/home/andrewtho5942/dev_ws/install/AROBO7/share/AROBO7/config/my_controllers.yaml</parameters>
       </plugin>
       <pose>0 0 0 0 -0 0</pose>
     </model>
