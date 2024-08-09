@@ -56,7 +56,7 @@ def generate_launch_description():
             'trans_file': trans_file,
             'gazebo_file': gazebo_file,
             'use_ros2_control': 'true',
-            'use_sim_mode': 'false'
+            'use_sim_mode': 'true'
         }
     ).toxml()
 
@@ -71,7 +71,7 @@ def generate_launch_description():
 #-- end xacro things --
 
     # Create a robot_state_publisher node
-    params = {'robot_description': robot_description_config, 'use_sim_time': False}
+    params = {'robot_description': robot_description_config, 'use_sim_time': True}
 
     node_robot_state_publisher = Node(
         package='robot_state_publisher',
